@@ -1,0 +1,12 @@
+apiVersion: qdnqn.clientmgr.io/v1
+kind: Client
+metadata:
+  labels:
+    app.kubernetes.io/name: client
+    app.kubernetes.io/instance: client-sample
+    app.kubernetes.io/part-of: operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: operator
+  name: client-sample
+spec:
+  # TODO(user): Add fields here
