@@ -27,6 +27,8 @@ import (
 	qdnqnv1 "clientmgr.io/tutorial/api/v1"
 )
 
+var ctrlLog = ctrl.Log.WithName("controller")
+
 // ClientReconciler reconciles a Client object
 type ClientReconciler struct {
 	client.Client
@@ -50,6 +52,8 @@ func (r *ClientReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctr
 	_ = log.FromContext(ctx)
 
 	// TODO(user): your logic here
+	ctrlLog.Info("hello world! - first kubernetes operator")
+	ctrlLog.Info("this should be fired every time there is a new CRD or update to a crd")
 
 	return ctrl.Result{}, nil
 }
